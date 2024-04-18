@@ -9,6 +9,41 @@ body {
   background-color: PaleGoldenRod;
 }
 
+.title-bar {
+    font-size: 11px;
+    background: var(--title-bar-bg);
+    padding: 3px 2px 3px 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-bar-text {
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0;
+    margin-right: 24px;
+}
+.title-bar-controls {
+    display: flex;
+    button {
+        padding: 0;
+        display: block;
+        min-width: 16px;
+        min-height: 14px;
+        &:focus {
+            outline: none;
+        }
+    }
+    button[aria-label="Minimize"] {
+    }
+    button[aria-label="Maximize"] {
+    }
+    button[aria-label="Help"] {
+    }
+    button[aria-label="Close"] {
+    }
+}
+
 .topnav {
   overflow: hidden;
   background-color: MediumSlateBlue;
@@ -39,6 +74,13 @@ body {
   
 </style>
 </head>
+
+<div class="title-bar">
+  <div class="title-bar-text">A Title Bar</div>
+  <div class="title-bar-controls">
+    <button aria-label="Close"></button>
+  </div>
+</div>
   
 <div class="topnav">
   <a class="active" href="#home">Home</a>
