@@ -75,11 +75,12 @@ body {
 <div class="footer">
   <p>&copy 2024 Felipe Lorenzo  </p>
 </div>
-
-<body>
-<audio src="../audio/pedro.mp3" autoplay>
-<p> Your browser does not support the audio element. </p>
-<embed src="../audio/pedro.mp3" width="180" height="90" hidden="true" />
-</audio>
-</body>
+  
+<div id="player">
+    <audio autoplay hidden loop>
+     <source src="../audio/pedro.mp3" type="audio/mpeg">
+                If you're reading this, audio isn't supported. 
+    </audio>
+</div>
+  
 </html>
