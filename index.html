@@ -1,14 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Redirecting to another page</title>
-    <!-- Redirecting to another page using meta tag -->
-    <meta http-equiv="refresh"
-          content="0.1; url =https://felipelorenzo.es/es/index.html" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Redirect</title>
+    <script>
+        // Function to get the browser's language
+        function getBrowserLanguage() {
+            var language = navigator.language || navigator.userLanguage;
+            return language.substring(0, 2); // Extract the first two letters (e.g., 'en', 'es', 'de')
+        }
+
+        // Function to redirect based on browser language
+        function redirectBasedOnLanguage() {
+            var language = getBrowserLanguage();
+            switch (language) {
+                case 'es':
+                    window.location.href = 'es/index.html'; // Replace 'spanish_website.html' with the actual URL of your Spanish website
+                    break;
+                case 'de':
+                    window.location.href = 'de/index.html'; // Replace 'german_website.html' with the actual URL of your German website
+                    break;
+                default:
+                    window.location.href = 'en/index.html'; // Replace 'english_website.html' with the actual URL of your English website
+            }
+        }
+
+        // Call the redirect function when the page loads
+        window.onload = redirectBasedOnLanguage;
+    </script>
 </head>
 <body>
-    <h3>
-        Redirecting to Another page in HTML
-    </h3>
+    <!-- Optional: You can add some content here to display before redirection -->
 </body>
 </html>
